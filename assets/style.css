@@ -18,6 +18,7 @@ nav li{
 	float: left;
 	padding: 7px 15px; /* top bottom = 7px, right left 15px */
 }
+
 nav li:hover{
 	padding: 10px;
 	background-color: rgb(121, 183, 28) ;
@@ -192,8 +193,6 @@ footer .kanan{
 	background-color: beige;
 	margin-bottom: 10px;
 	position: relative;
-	z-index: -1;
-
 }
 .img-box img{
 	width: 100%;
@@ -213,5 +212,4 @@ footer .kanan{
 .img-box p:hover{
 	/* opacity: 0.2; */
 	background-color: transparent;
-	z-index: -1000;
 }
