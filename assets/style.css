@@ -1,3 +1,17 @@
+*{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+a[target="_blank"] {
+	color: rgb(187, 255, 0);
+}
+
+input[type="text"] {
+	border: 1px solid gray;
+	padding: 5px 10px;
+}
+
 /* contoh tag selector  */
 body{
 	background-color: rgb(224, 246, 191);
@@ -10,30 +24,57 @@ nav{
 	position: fixed;
 	height: 60px;
 }
-/* descendant selector */
-nav ul{
-	list-style: none;
+nav a{
+	color: white;
+	text-decoration: none;
 }
-nav li{
-	float: left;
-	padding: 7px 15px; /* top bottom = 7px, right left 15px */
-}
-
 nav li:hover{
 	padding: 10px;
 	background-color: rgb(121, 183, 28) ;
-	color:rgb(242, 231, 84);
+	color:rgb(242, 231, 84); 
 }
-nav a:visited{
-	color:aliceblue;
+.kiri{
+	float: left;
+	list-style: none;
 }
+.kiri li{	
+	float: left;
+	padding: 7px 15px;
+}
+.kanan{
+	float: right;
+	list-style: none;
+	margin-right: 40px;
+}
+.kanan li{
+	padding: 7px 15px;
+}
+/* descendant selector */
+/*start nav lama*/
+/* nav ul{
+	list-style: none;
+} */
+/* nav li{
+	float: left;
+	padding: 7px 15px; /* top bottom = 7px, right left 15px */
+/* } 
+nav ul a{
+	color: white;
+	text-decoration: none;
+}
+nav li:hover{
+	padding: 10px;
+	background-color: rgb(121, 183, 28) ;
+	color:rgb(242, 231, 84); 
+} */
+/*end nav lama*/
 /* contoh class selector */
 .header{
 	/* background-color: rgb(179, 244, 83); */
 	background-image: url(image/banner.jpg);
 	background-size: cover;
 	top: 80px;
-	height: 220px;
+	height: 250px;
 	max-width:100%;
 	padding: 85px 0px 0px 270px;
 }
@@ -65,13 +106,18 @@ nav a:visited{
 }
 /* id selector */
 #aboutme{
+	/* border: 2px dotted rgb(5, 113, 22); */
 	margin: 5px;
 }
 #aboutme h2, .skill h2{
 	text-align: center;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family: 'Franklin Gothic Medium';
 	color:rgb(62, 112, 12);
 	font-size: 30px;
+}
+table td{
+	padding: 3px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container{
 	/* border: 2px blue groove; */
@@ -82,13 +128,10 @@ nav a:visited{
 	/* flex-wrap: wrap; */
 }
 .box1{
-	/* border: 2px rgb(255, 89, 0) groove; */
 	margin: 10px;
 	flex:1;	
 }
 .box2{
-	/* border: 2px rgb(255, 0, 162) groove; */
-	/* width: 30%; */
 	margin: 10px;	
 	flex:2;
 	
@@ -164,6 +207,16 @@ footer .kanan{
 	flex-direction: column;
 	/* flex-wrap: wrap; */
 }
+/* ================ */
+
+.foot{
+	max-width:  100%;
+	height: 30px;
+	background-color:  rgb(43, 70, 2);
+	color: white;
+	padding: 10px;
+	font-size: 18px;
+}
 .portofolio{
 	top: 100px;
 	max-width:100%;
@@ -212,4 +265,35 @@ footer .kanan{
 .img-box p:hover{
 	/* opacity: 0.2; */
 	background-color: transparent;
+}
+
+@media (max-width:600px){
+	.header{
+		top: 80px;
+		height: 250px;
+		padding: 85px 0px 0px 50px;
+	}
+	.kiri{
+		float: left;
+		list-style: none;
+	}
+	.kiri li{	
+		float: left;
+		padding: 7px 3px;
+	}
+	.kanan{
+		list-style: none;
+		margin-right: 0px;
+	}
+	.kanan li{
+		padding: 7px 1px;
+	}
+	.container{
+		/* border: 2px blue groove; */
+		max-width: 100%;
+		/* margin: 20px auto; */
+		display: flex;
+		flex-direction: column;
+		/* flex-wrap: wrap; */
+	}
 }
